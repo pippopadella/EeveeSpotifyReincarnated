@@ -32,7 +32,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ inputs.branch }}
           fetch-depth: 0
@@ -43,7 +43,7 @@ jobs:
           xcode-version: '26.3.0'
 
       - name: Setup Theos
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: theos/theos
           path: ${{ github.workspace }}/theos
