@@ -52,7 +52,7 @@ jobs:
           xcode-version: "26.3.0"
 
       - name: Checkout ${{ matrix.label }} Theos
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: ${{ matrix.theos_repository }}
           path: ${{ github.workspace }}/theos
