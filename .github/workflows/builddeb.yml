@@ -42,7 +42,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           submodules: recursive
 
@@ -146,7 +146,7 @@ jobs:
           fi
 
       - name: Upload ${{ matrix.label }} artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: EeveeSpotify-${{ matrix.label }}-DEB
           path: Outputs/DEBS/*.deb
@@ -160,7 +160,7 @@ jobs:
       contents: write
     steps:
       - name: Download both packages
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           pattern: EeveeSpotify-*-DEB
           path: Outputs/DEBS
