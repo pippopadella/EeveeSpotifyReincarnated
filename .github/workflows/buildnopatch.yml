@@ -80,7 +80,7 @@ jobs:
           echo "DEB_NAME=$(basename "$DEB_PATH")" >> $GITHUB_ENV
 
       - name: Upload .deb artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ env.DEB_NAME }}
           path: ${{ env.DEB_PATH }}
@@ -191,7 +191,7 @@ jobs:
 
       - name: Upload IPA artifact
         if: ${{ inputs.ipa_url != '' && (inputs.upload_method == 'artifacts' || inputs.upload_method == 'both') }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: EeveeSpotify-IPA
           path: ${{ env.OUT_IPA }}
